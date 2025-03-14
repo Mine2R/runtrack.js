@@ -1,0 +1,26 @@
+body {
+    min-height: 4096 px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+    padding: 20;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:rgba(255, 140, 0, 0.9);
+    padding: 10px;
+    color:#870404;
+    text-align: center;
+    transition: backgroundcolor 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+}
+

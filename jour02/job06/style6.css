@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+body.konami {
+    background-color: #003366; 
+    color: white; 
+   
+}
+
+h1 {
+    font-size: 2rem;
+    color: inherit;
+}
+
