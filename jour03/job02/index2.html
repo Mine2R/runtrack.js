@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc-en-ciel</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #container, #dropzone {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid #000;
+            min-height: 120px;
+        }
+
+        #dropzone {
+            min-height: 300px;
+            width: 700px;
+            border: 2px dashed green;
+            margin: auto;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            border: 2px solid black;
+            cursor: grab;
+        }
+        #message {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+
+    <h1>Arc-en-ciel</h1>
+    
+    <button id="shuffleBtn">Mélanger les images</button>
+    <button id="checkBtn">Vérifier</button>
+
+    <h2>Images mélangées :</h2>
+    <div id="container">
+        <img src="img arc en ciel/arc1.png" alt="Rouge" data-position="1" draggable="true">
+        <img src="img arc en ciel/arc2.png" alt="Orange" data-position="2" draggable="true">
+        <img src="img arc en ciel/arc3.png" alt="Jaune" data-position="3" draggable="true">
+        <img src="img arc en ciel/arc4.png" alt="Vert" data-position="4" draggable="true">
+        <img src="img arc en ciel/arc5.png" alt="Bleu" data-position="5" draggable="true">
+        <img src="img arc en ciel/arc6.png" alt="Violet" data-position="6" draggable="true">
+    </div>
+
+    <h2>Placez les images ici :</h2>
+    <div id="dropzone"></div>
+
+    <p id="message"></p>
+
+    <script src="script-jquery2.js"></script>
+
+</body>
+</html>
+
+
+
