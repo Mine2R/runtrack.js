@@ -1,70 +1,54 @@
-$(document).ready(function() {
-    const tiles = [1, 2, 3, 4, 5, 6, 7, 8, null];
-    let emptyTileIndex = tiles.indexOf(null);
+$(document).ready(function () {
+    const gameBoard = $('#game-board');
+    let emptyCell = $('#GCell9'); // La cellule vide
 
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
+    function getCellPosition(cell) {
+        return cell.index();
+    }
+
+    function getMovableCells(emptyPos) {
+        let cells = [];
+        let row = Math.floor(emptyPos / 3);
+        let col = emptyPos % 3;
+
+        if (col > 0) cells.push(emptyPos - 1);
+        if (col < 2) cells.push(emptyPos + 1);
+        if (row > 0) cells.push(emptyPos - 3);
+        if (row < 2) cells.push(emptyPos + 3);
+
+        return cells;
+    }
+
+    gameBoard.on('click', '.game-tile', function () {
+        let clickedCell = $(this);
+        let emptyPos = getCellPosition(emptyCell);
+        let clickedPos = getCellPosition(clickedCell);
+
+        if (getMovableCells(emptyPos).includes(clickedPos)) {
+            // Échange l'image avec la case vide
+            let tempHTML = emptyCell.html();
+            emptyCell.html(clickedCell.html());
+            clickedCell.html(tempHTML);
+
+            // Met à jour la case vide
+            emptyCell = clickedCell;
         }
-    }
+    });
 
-    function createTiles() {
-        const gameBoard = $('#game-board');
-        gameBoard.empty();
-        tiles.forEach((tile, index) => {
-            if (tile !== null) {
-                const div = $('<div></div>')
-                    .addClass('tile')
-                    .css('left', `${(index % 3) * 100}px`)
-                    .css('top', `${Math.floor(index / 3) * 100}px`)
-                    .attr('data-index', index);
-                const img = $(`#pieces img:nth-child(${tile})`).clone();
-                div.append(img);
-                div.on('click', moveTile);
-                gameBoard.append(div);
-            }
-        });
-    }
-
-    function moveTile() {
-        const index = parseInt($(this).attr('data-index'));
-        const emptyIndex = tiles.indexOf(null);
-        const diff = Math.abs(index - emptyIndex);
-        if (diff === 1 || diff === 3) {
-            [tiles[index], tiles[emptyIndex]] = [tiles[emptyIndex], tiles[index]];
-            updateTiles();
-            checkWin();
-        }
-    }
-
-    function updateTiles() {
-        createTiles();
-    }
-
-    function checkWin() {
-        const isWin = tiles.every((tile, index) => tile === index + 1 || (tile === null && index === 8));
-        const message = $('#message');
-        if (isWin) {
-            message.text('Vous avez gagné !').show();
-            $('#restartButton').show();
-        } else {
-            message.hide();
-        }
-    }
-
-    function restartGame() {
-        shuffle(tiles);
-        updateTiles();
-        $('#message').hide();
-        $('#restartButton').hide();
-    }
-
-    $('#restartButton').on('click', restartGame);
-
-    shuffle(tiles);
-    createTiles();
+    $("#restartButton").click(function () {
+        location.reload();
+    });
 });
+
+
+
+
+
+
+
+
+
+
 
 
 
