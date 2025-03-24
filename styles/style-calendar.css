@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #4EAAFD;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-container {
+    background-color:white; 
+    color: white;
+    padding: 20px;
+}
+
+.banner-container h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#calendar {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #4EAAFD; 
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+td {
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    width: 14%;
+}
+
+
+td.weekend {
+    background-color: #f8d7da; 
+}
+
+
+td.today {
+    background-color: #28a745;
+    color: white;
+}
+
+
+td:hover {
+    background-color: #d6d6d6;
+}
+
+.modal-dialog {
+    max-width: 500px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #4EAAFD;
+    color: white;
+    padding: 15px;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body .form-label {
+    font-weight: bold;
+}
+
+.modal-body .btn-primary {
+    width: 100%;
+    background-color:#4EAAFD;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Responsive : Ajuster le calendrier pour les petits écrans */
+@media (max-width: 768px) {
+    table {
+        font-size: 1rem;
+    }
+
+    td {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+

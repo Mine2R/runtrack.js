@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "date": "2025-03-25",
+        "status": "attente"
+    },
+    {
+        "id": 2,
+        "user_id": 2,
+        "date": "2025-03-26",
+        "status": "accepté"
+    }
+]

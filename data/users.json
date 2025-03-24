@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "email": "etudiant@laplateforme.io",
+        "role": "etudiant"
+    },
+    {
+        "id": 2,
+        "email": "moderateur@laplateforme.io",
+        "role": "moderateur"
+    },
+    {
+        "id": 3,
+        "email": "admin@laplateforme.io",
+        "role": "admin"
+    }
+]

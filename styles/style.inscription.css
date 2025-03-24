@@ -1,0 +1,22 @@
+.header-text {
+    color: #4EAAFD;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'arial black', sans-serif;
+    letter-spacing: 5px ;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+.container {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    background-color:#4EAAFD;
+}
+.card {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f5f5f5;
+
+}

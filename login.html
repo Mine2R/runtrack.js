@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style-login.css">
+    <title>Connexion à La Plateforme</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header style="display: flex; justify-content: center; align-items: center;">
+        <div class="banner-container text center">
+            <img src="assets/logo plateforme.jpg" alt="logo La Plateforme" class="img-fluid">
+        </div>
+    </header>
+    <div class="container d-flex justify-content-center align-items-center flex-grow-1">
+        <div class="card" style="width: 100%; max-width: 400px;">
+            <div class="card-body text-center">
+                <h5 class="card-title text-center fw-bold mb-4 mt-3">Connexion</h5>
+                <form action="connexion.php" method="POST" id="login-form">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Adresse e-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="exemple@laplateforme.io">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Mot de passe</label>
+                        <input type="password" class="form-control" id="password" name="password" required placeholder="******">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Se connecter</button>
+                    </div>
+                </form>
+                <div class="text-center mt-3 fw-bold">
+                    <a href="inscription.html">Pas encore inscrit ? Créer un compte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
